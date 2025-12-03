@@ -2,10 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Hoshiworks – Workflow Automation Studio">
-  <section class="min-h-screen flex items-center justify-center px-6">
-    <div class="max-w-xl space-y-6 text-center">
-      <p class="text-sm tracking-[0.3em] uppercase text-sky-300/80">
+<Layout title="Hoshiworks – Workflow & Automation Studio">
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center px-6 py-16">
+    <div class="max-w-3xl space-y-6 text-center">
+      <p class="text-xs tracking-[0.3em] uppercase text-sky-300/80">
         Hoshiworks
       </p>
 
@@ -35,4 +36,154 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="px-6 py-20 border-t border-slate-800">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <div class="space-y-2 text-center">
+        <h2 class="text-2xl font-semibold tracking-tight">
+          How a Hoshiworks project works
+        </h2>
+        <p class="text-sm text-slate-300">
+          Three calm steps, no jargon. You bring the messy work; we bring structure and automations.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 text-sm space-y-2">
+          <p class="text-xs font-medium uppercase tracking-[0.25em] text-sky-300/80">
+            Step 1
+          </p>
+          <h3 class="text-base font-semibold">Understand your work</h3>
+          <p class="text-slate-300">
+            Two short conversations to map what your team actually does, where the friction lives,
+            and which parts are worth automating.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 text-sm space-y-2">
+          <p class="text-xs font-medium uppercase tracking-[0.25em] text-sky-300/80">
+            Step 2
+          </p>
+          <h3 class="text-base font-semibold">Build something that helps</h3>
+          <p class="text-slate-300">
+            A 1–2 week sprint to build one meaningful automation or tool that saves real time
+            and reduces “did anyone do that?” anxiety.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 text-sm space-y-2">
+          <p class="text-xs font-medium uppercase tracking-[0.25em] text-sky-300/80">
+            Step 3
+          </p>
+          <h3 class="text-base font-semibold">Keep it running smoothly</h3>
+          <p class="text-slate-300">
+            Light ongoing support so the automation doesn’t become another abandoned system
+            when your tools or team change.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="px-6 py-20 border-t border-slate-800">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <div class="space-y-2">
+        <h2 class="text-2xl font-semibold tracking-tight">
+          What Hoshiworks can do for your team
+        </h2>
+        <p class="text-sm text-slate-300 max-w-2xl">
+          Focused, project-shaped work for small teams who need better workflows —
+          not a 200-page automation roadmap that never ships.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3 text-sm">
+        <article class="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 space-y-3">
+          <h3 class="text-base font-semibold">Understand Your Work</h3>
+          <p class="text-slate-300">
+            Two structured sessions to map your workflow, tools, and failure points.
+            You leave with a clear picture of where automation will actually help.
+          </p>
+          <p class="text-xs text-slate-400">
+            Good if you know things feel messy but aren’t sure what to build yet.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 space-y-3">
+          <h3 class="text-base font-semibold">Build Something That Helps</h3>
+          <p class="text-slate-300">
+            A focused build sprint to deliver one automation or internal tool that removes
+            a specific recurring headache from your team’s week.
+          </p>
+          <p class="text-xs text-slate-400">
+            Good if you have a clear “this is the annoying thing we keep doing by hand”.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 space-y-3">
+          <h3 class="text-base font-semibold">Keep It Running Smoothly</h3>
+          <p class="text-slate-300">
+            Light ongoing support to keep your workflows healthy as your tools, team,
+            and data change over time.
+          </p>
+          <p class="text-xs text-slate-400">
+            Good if you’d like a reliable human to call when something breaks.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Hoshiworks -->
+  <section id="why" class="px-6 py-20 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div class="space-y-2">
+        <h2 class="text-2xl font-semibold tracking-tight">
+          Why Hoshiworks instead of another automation shop?
+        </h2>
+        <p class="text-sm text-slate-300 max-w-2xl">
+          The goal isn’t to cram AI into everything — it’s to make the work less brittle,
+          more humane, and easier to change as your organization evolves.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3 text-sm">
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold">Small-team native</h3>
+          <p class="text-slate-300">
+            Built for nonprofits, studios, and small businesses where “process” lives
+            in a few brains and a lot of spreadsheets.
+          </p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold">Human-centered tools</h3>
+          <p class="text-slate-300">
+            Workflows are designed around how people actually communicate and decide things,
+            not just what your tools can technically do.
+          </p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold">Calm, honest scope</h3>
+          <p class="text-slate-300">
+            Clear boundaries, no hype. Each project is scoped to something that can genuinely ship,
+            not a fantasy platform your team will never maintain.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-6 py-10 border-t border-slate-800 text-xs text-slate-400">
+    <div class="max-w-5xl mx-auto flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <p>© {new Date().getFullYear()} Hoshiworks. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#how-it-works" class="hover:text-slate-200">How it works</a>
+        <a href="#services" class="hover:text-slate-200">Services</a>
+        <a href="#intake" class="hover:text-slate-200">Start a project</a>
+      </div>
+    </div>
+  </footer>
 </Layout>
