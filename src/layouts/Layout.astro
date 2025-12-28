@@ -9,9 +9,25 @@ const { title = "Hoshiworks" } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
   </head>
+
   <body class="min-h-screen bg-slate-950 text-slate-100">
-    <main class="min-h-screen">
-      <slot />
-    </main>
-  </body>
-</html>
+    <header
+      id="topbar"
+      class="fixed top-0 left-0 right-0 z-40 border-b border-slate-800 bg-slate-950/75 backdrop-blur
+             opacity-0 pointer-events-none transition-opacity duration-300"
+    >
+      <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+        <a href="#" class="text-sm font-semibold tracking-wide hover:text-slate-200 transition">
+          Hoshiworks
+        </a>
+
+        <a
+          href="#intake"
+          class="text-sm text-slate-300 hover:text-slate-100 transition"
+        >
+          Start a project →
+        </a>
+      </div>
+    </header>
+
+    <main class="min
