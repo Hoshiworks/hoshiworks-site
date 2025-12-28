@@ -2,16 +2,25 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Hoshiworks – Custom workflow automations">
+<Layout title="Hoshiworks – Custom workflow automation solutions">
   <!-- Hero -->
   <section class="min-h-screen flex items-center justify-center px-6 py-16">
     <div class="max-w-3xl space-y-6 text-center">
-      <p class="text-xs tracking-[0.3em] uppercase text-sky-300/80">
+      <div class="flex justify-center">
+        <img
+          src="/brand/hoshiworks-logo-1.0.png"
+          alt="Hoshiworks"
+          class="h-14 sm:h-20 w-auto"
+        />
+      </div>
+
+      <!-- Keep the original text color asset available (hidden, for future reuse) -->
+      <p class="hidden text-xs tracking-[0.3em] uppercase text-sky-300/80">
         Hoshiworks
       </p>
 
       <h1 class="text-5xl font-semibold tracking-tight sm:text-6xl">
-        Custom workflow automations
+        Custom workflow automation solutions
       </h1>
 
       <p class="text-base text-slate-300 max-w-2xl mx-auto">
@@ -42,7 +51,7 @@ import Layout from "../layouts/Layout.astro";
     <div class="max-w-5xl mx-auto space-y-8">
       <div class="space-y-2 text-center">
         <h2 class="text-2xl font-semibold tracking-tight">
-          What Hoshiworks can do for your team
+          What can Hoshiworks can do for your team?
         </h2>
         <p class="text-sm text-slate-300 max-w-3xl mx-auto">
           Take the parts of your work that nobody wants to do, and make them the parts that nobody has to do.
@@ -91,7 +100,7 @@ import Layout from "../layouts/Layout.astro";
     <div class="max-w-5xl mx-auto space-y-8">
       <div class="space-y-2 text-center">
         <h2 class="text-2xl font-semibold tracking-tight">
-          How it works
+          What is the Hoshiworks process?
         </h2>
         <p class="text-sm text-slate-300 max-w-3xl mx-auto">
           Every project has three simple steps, and one tangible outcome.
@@ -151,7 +160,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <div class="grid gap-6 md:grid-cols-3 text-sm">
-        <div class="space-y-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 space-y-2">
           <h3 class="text-base font-semibold">Small-team focused</h3>
           <p class="text-slate-300">
             I prefer to build for nonprofits, studios, and small businesses where process lives in a few brains and
@@ -159,7 +168,7 @@ import Layout from "../layouts/Layout.astro";
           </p>
         </div>
 
-        <div class="space-y-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 space-y-2">
           <h3 class="text-base font-semibold">Human-centered processes</h3>
           <p class="text-slate-300">
             My workflows are designed around how people actually communicate and decide things,
@@ -167,7 +176,7 @@ import Layout from "../layouts/Layout.astro";
           </p>
         </div>
 
-        <div class="space-y-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/40 p-5 space-y-2">
           <h3 class="text-base font-semibold">Deliberately limited scope</h3>
           <p class="text-slate-300">
             Clear boundaries, no hype. Each project is scoped to one narrow but tangible improvement for your business,
