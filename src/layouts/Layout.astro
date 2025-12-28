@@ -21,13 +21,33 @@ const { title = "Hoshiworks" } = Astro.props;
           Hoshiworks
         </a>
 
-        <a
-          href="#intake"
-          class="text-sm text-slate-300 hover:text-slate-100 transition"
-        >
+        <a href="#intake" class="text-sm text-slate-300 hover:text-slate-100 transition">
           Start a project →
         </a>
       </div>
     </header>
 
-    <main class="min
+    <main class="min-h-screen">
+      <slot />
+    </main>
+
+    <script is:inline>
+      const topbar = document.getElementById("topbar");
+      const threshold = 80;
+
+      const update = () => {
+        const show = window.scrollY > threshold;
+        if (show) {
+          topbar.classList.remove("opacity-0", "pointer-events-none");
+          topbar.classList.add("opacity-100");
+        } else {
+          topbar.classList.add("opacity-0", "pointer-events-none");
+          topbar.classList.remove("opacity-100");
+        }
+      };
+
+      update();
+      window.addEventListener("scroll", update, { passive: true });
+    </script>
+  </body>
+</html>
