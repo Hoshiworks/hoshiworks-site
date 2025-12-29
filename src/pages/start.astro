@@ -1,0 +1,283 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Start a Project | Hoshiworks">
+  <main class="px-6 py-16">
+    <div class="max-w-3xl mx-auto space-y-10">
+      <header class="space-y-4 text-center">
+        <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight">
+          Start a project
+        </h1>
+        <p class="text-slate-300">
+          This is a short intake so I can understand what’s going on and decide whether I’m a good fit.
+        </p>
+
+        <div class="text-sm text-slate-300 space-y-1">
+          <p><span class="text-slate-100">Time estimate:</span> 5 to 7 minutes</p>
+          <p><span class="text-slate-100">Capacity note:</span> To ensure work quality, I only take on a small number of projects at a time.</p>
+          <p class="text-slate-400">I typically review new intakes within 1 to 2 business days.</p>
+        </div>
+      </header>
+
+      <section class="rounded-2xl border border-slate-800 bg-slate-900/30 p-6 sm:p-8">
+        <!-- Netlify Forms: no JS required -->
+        <form
+          name="intake"
+          method="POST"
+          data-netlify="true"
+          action="/thanks"
+          class="space-y-8"
+        >
+          <input type="hidden" name="form-name" value="intake" />
+
+          <!-- Section 1: Basics -->
+          <div class="space-y-4">
+            <h2 class="text-lg font-semibold">The basics</h2>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <label class="space-y-2">
+                <span class="text-sm text-slate-200">Name <span class="text-slate-400">(required)</span></span>
+                <input
+                  name="name"
+                  required
+                  type="text"
+                  class="w-full rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-2 text-slate-100 placeholder:text-slate-500"
+                  placeholder="Your name"
+                />
+              </label>
+
+              <label class="space-y-2">
+                <span class="text-sm text-slate-200">Email <span class="text-slate-400">(required)</span></span>
+                <input
+                  name="email"
+                  required
+                  type="email"
+                  class="w-full rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-2 text-slate-100 placeholder:text-slate-500"
+                  placeholder="you@organization.com"
+                />
+              </label>
+
+              <label class="space-y-2">
+                <span class="text-sm text-slate-200">Organization</span>
+                <input
+                  name="org_name"
+                  type="text"
+                  class="w-full rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-2 text-slate-100 placeholder:text-slate-500"
+                  placeholder="Organization or project name"
+                />
+              </label>
+
+              <label class="space-y-2">
+                <span class="text-sm text-slate-200">Your role</span>
+                <input
+                  name="role"
+                  type="text"
+                  class="w-full rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-2 text-slate-100 placeholder:text-slate-500"
+                  placeholder="Founder, ops, admin, program manager…"
+                />
+              </label>
+            </div>
+          </div>
+
+          <!-- Section 2: Work context -->
+          <div class="space-y-4">
+            <h2 class="text-lg font-semibold">Tell me about your work</h2>
+
+            <label class="space-y-2 block">
+              <span class="text-sm text-slate-200">Team size <span class="text-slate-400">(required)</span></span>
+              <select
+                name="team_size"
+                required
+                class="w-full rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-2 text-slate-100"
+              >
+                <option value="" selected disabled>Select one</option>
+                <option>Just me</option>
+                <option>2–5</option>
+                <option>6–15</option>
+                <option>16–30</option>
+                <option>31+</option>
+              </select>
+            </label>
+
+            <fieldset class="space-y-3">
+              <legend class="text-sm text-slate-200">
+                Tools and systems you use <span class="text-slate-400">(check all that apply)</span>
+              </legend>
+              <p class="text-xs text-slate-400">
+                Please include anything you regularly use or rely on, even if it feels mundane.
+              </p>
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div class="space-y-2">
+                  <div class="text-xs text-slate-400">Productivity and docs</div>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Google Workspace" />Google Workspace</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Microsoft 365" />Microsoft 365</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Notion" />Notion</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Confluence" />Confluence</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Dropbox" />Dropbox</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Spreadsheets" />Spreadsheets (Sheets or Excel)</label>
+                </div>
+
+                <div class="space-y-2">
+                  <div class="text-xs text-slate-400">Projects and communication</div>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Asana" />Asana</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Trello" />Trello</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="ClickUp" />ClickUp</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Jira" />Jira</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Monday" />Monday</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Slack" />Slack</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Microsoft Teams" />Microsoft Teams</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="tools" value="Email-heavy workflows" />Email-heavy workflows</label>
+                </div>
+              </div>
+
+              <label class="space-y-2 block pt-2">
+                <span class="text-sm text-slate-200">Other tools or systems</span>
+                <textarea
+                  name="tools_other"
+                  rows="3"
+                  class="w-full rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-2 text-slate-100 placeholder:text-slate-500"
+                  placeholder="Please list everything you use or have access to that isn’t shown above."
+                ></textarea>
+              </label>
+            </fieldset>
+          </div>
+
+          <!-- Section 3: The story -->
+          <div class="space-y-4">
+            <h2 class="text-lg font-semibold">Tell me your story</h2>
+
+            <label class="space-y-2 block">
+              <span class="text-sm text-slate-200">What’s not working? <span class="text-slate-400">(required)</span></span>
+              <textarea
+                name="what_not_working"
+                required
+                rows="6"
+                class="w-full rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-2 text-slate-100 placeholder:text-slate-500"
+                placeholder="What’s happening, where it shows up, and why it’s a problem."
+              ></textarea>
+            </label>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <label class="space-y-2 block">
+                <span class="text-sm text-slate-200">How often does this come up? <span class="text-slate-400">(required)</span></span>
+                <select
+                  name="frequency"
+                  required
+                  class="w-full rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-2 text-slate-100"
+                >
+                  <option value="" selected disabled>Select one</option>
+                  <option>Daily</option>
+                  <option>Weekly</option>
+                  <option>Monthly</option>
+                  <option>Irregular but painful</option>
+                </select>
+              </label>
+
+              <fieldset class="space-y-2">
+                <legend class="text-sm text-slate-200">What does this mainly cost you? <span class="text-slate-400">(required)</span></legend>
+                <div class="space-y-1">
+                  <label class="flex gap-2 text-sm text-slate-200"><input required type="checkbox" name="impact" value="Time" />Time</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="impact" value="Errors or rework" />Errors or rework</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="impact" value="Stress or cognitive load" />Stress or cognitive load</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="impact" value="Missed follow-ups" />Missed follow-ups</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="impact" value="Missed revenue" />Missed revenue</label>
+                  <label class="flex gap-2 text-sm text-slate-200"><input type="checkbox" name="impact" value="Other" />Other</label>
+                </div>
+                <p class="text-xs text-slate-400">Tip: check “Time” plus anything else that applies.</p>
+              </fieldset>
+            </div>
+          </div>
+
+          <!-- Section 4: Constraints -->
+          <div class="space-y-4">
+            <h2 class="text-lg font-semibold">Practical constraints</h2>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <label class="space-y-2 block">
+                <span class="text-sm text-slate-200">Data sensitivity <span class="text-slate-400">(required)</span></span>
+                <select
+                  name="data_sensitivity"
+                  required
+                  class="w-full rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-2 text-slate-100"
+                >
+                  <option value="" selected disabled>Select one</option>
+                  <option>Low</option>
+                  <option>Medium</option>
+                  <option>High</option>
+                </select>
+              </label>
+
+              <label class="space-y-2 block">
+                <span class="text-sm text-slate-200">Access level you’re comfortable with <span class="text-slate-400">(required)</span></span>
+                <select
+                  name="access_level"
+                  required
+                  class="w-full rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-2 text-slate-100"
+                >
+                  <option value="" selected disabled>Select one</option>
+                  <option>Read-only access</option>
+                  <option>Limited access</option>
+                  <option>Admin access (with safeguards)</option>
+                  <option>Not sure yet</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="space-y-2 block">
+              <span class="text-sm text-slate-200">Budget range <span class="text-slate-400">(optional)</span></span>
+              <select
+                name="budget_range"
+                class="w-full rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-2 text-slate-100"
+              >
+                <option value="" selected>Prefer not to say</option>
+                <option>Under $1k</option>
+                <option>$1k–$3k</option>
+                <option>$3k–$7k</option>
+                <option>$7k+</option>
+                <option>Not sure yet</option>
+              </select>
+              <p class="text-xs text-slate-400">This helps with scoping, but you can skip it.</p>
+            </label>
+          </div>
+
+          <!-- Section 5: Open floor -->
+          <div class="space-y-4">
+            <h2 class="text-lg font-semibold">Anything else?</h2>
+
+            <label class="space-y-2 block">
+              <span class="text-sm text-slate-200">Additional context</span>
+              <textarea
+                name="additional_context"
+                rows="5"
+                class="w-full rounded-xl border border-slate-700 bg-slate-950/40 px-3 py-2 text-slate-100 placeholder:text-slate-500"
+                placeholder="Anything you want me to understand about how you see the problem, constraints, or what success looks like."
+              ></textarea>
+            </label>
+          </div>
+
+          <!-- Section 6: Consent -->
+          <div class="space-y-4">
+            <label class="flex gap-3 text-sm text-slate-200">
+              <input name="consent_ack" required type="checkbox" class="mt-1" />
+              <span>I understand that this is an initial intake and not a commitment.</span>
+            </label>
+          </div>
+
+          <div class="pt-2">
+            <button
+              type="submit"
+              class="w-full rounded-2xl bg-slate-100 text-slate-950 font-semibold py-3 hover:bg-white transition"
+            >
+              Submit
+            </button>
+            <p class="mt-3 text-xs text-slate-400 text-center">
+              By submitting, you’ll receive a confirmation email and a PDF copy of your answers.
+            </p>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+</Layout>
